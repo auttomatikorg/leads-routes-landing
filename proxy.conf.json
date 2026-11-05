@@ -1,0 +1,10 @@
+{
+  "/api/contact": {
+    "target": "https://n8n.innovalaus.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api/contact$": "/webhook/lead-routes-landing"
+    }
+  }
+}

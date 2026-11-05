@@ -1,0 +1,440 @@
+<header class="topbar">
+  <div class="wrap">
+    <span class="logo">
+      <svg class="mark" viewBox="192 189 870 868" aria-hidden="true">
+        <path d="M613,189 L582,196 L556,209 L248,403 L230,417 L214,435 L198,466 L192,495 L192,755 L200,786 L208,802 L217,815 L242,838 L320,885 L564,1041 L585,1050 L600,1054 L629,1057 L658,1053 L673,1048 L694,1037 L701,1031 L705,1024 L705,1013 L702,1006 L657,969 L500,848 L438,797 L416,774 L403,753 L398,733 L400,714 L410,694 L428,675 L450,659 L470,648 L498,636 L534,624 L666,591 L689,583 L712,572 L728,560 L738,546 L741,536 L739,517 L730,502 L715,490 L692,479 L658,470 L621,466 L442,464 L413,462 L402,456 L394,447 L391,440 L391,427 L398,414 L408,406 L422,402 L703,402 L744,408 L776,417 L816,435 L839,451 L857,469 L866,482 L875,500 L880,521 L880,540 L876,558 L867,577 L860,587 L842,606 L829,616 L792,637 L748,655 L666,684 L632,700 L612,717 L608,725 L607,734 L612,747 L620,756 L631,765 L651,777 L698,800 L785,838 L897,890 L907,893 L918,893 L930,889 L1013,838 L1039,813 L1051,793 L1057,778 L1062,752 L1062,500 L1057,471 L1044,442 L1032,426 L1011,407 L687,203 L668,195 L640,189 Z"></path>
+      </svg>
+      Lead Routes
+    </span>
+    <nav class="topnav">
+      <a href="#recorrido">Cómo funciona</a>
+      <a href="#capacidades">Qué hace</a>
+      <a href="#caso">Caso real</a>
+      <a href="#planes">Planes</a>
+    </nav>
+    <button class="btn btn-primary btn-sm" type="button" (click)="openContact('Prueba gratis')"><span>Empezar gratis</span></button>
+  </div>
+</header>
+
+<section class="band hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Diseña el recorrido de cada lead</p>
+      <h1>Cada lead, atendido en segundos. <em>A cualquier hora.</em></h1>
+      <p class="lede">Cada mensaje no contestado puede costarte una venta. Crea un sistema que responda automáticamente, filtre y te entregue oportunidades listas para cerrar. <b>Factura más sin gastar el doble.</b></p>
+      <div class="cta-row">
+        <button class="btn btn-primary" type="button" (click)="openContact('Prueba de 3 meses')"><span>Probar 3 meses gratis</span></button>
+        <a class="btn btn-secondary" href="#caso"><span>Ver el caso real</span></a>
+      </div>
+      <div class="states">
+        <span><span class="dot"></span>WhatsApp, Instagram, Messenger y correo</span>
+      </div>
+    </div>
+
+    <div class="hero-route" role="img" aria-label="Un camino azul oscuro asciende desde un lead hasta convertirse en cliente.">
+      <svg viewBox="0 0 600 540" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <pattern id="route-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+            <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#D7E6F4" stroke-width="1" />
+          </pattern>
+          <linearGradient id="route-surface" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#F8FBFF" />
+            <stop offset="1" stop-color="#E8F2FC" />
+          </linearGradient>
+        </defs>
+        <rect width="600" height="540" rx="24" fill="url(#route-surface)" />
+        <rect width="600" height="540" rx="24" fill="url(#route-grid)" opacity=".6" />
+        <path class="route-contour" d="M-30 452C54 420 87 419 122 363S188 281 258 290 370 222 384 149 464 44 635 46" />
+        <path class="route-contour" d="M-18 508C72 470 101 467 158 407S202 333 283 341 412 263 440 189 523 99 630 95" />
+        <path class="route-bed" d="M58 507C99 470 136 493 145 444S91 386 120 347 227 361 248 322 217 256 260 218 360 238 394 177 443 124 476 113" />
+        <path class="route-road" pathLength="1000" d="M58 507C99 470 136 493 145 444S91 386 120 347 227 361 248 322 217 256 260 218 360 238 394 177 443 124 476 113" />
+        <path class="route-center" d="M58 507C99 470 136 493 145 444S91 386 120 347 227 361 248 322 217 256 260 218 360 238 394 177 443 124 476 113" />
+        <g class="route-client">
+          <rect x="403" y="32" width="174" height="68" rx="13" />
+          <circle cx="431" cy="66" r="10" />
+          <path d="M427 66l3 3 5-6" />
+          <text x="452" y="72">CLIENTE</text>
+        </g>
+        <circle class="route-finish" cx="476" cy="113" r="15" />
+        <circle class="route-finish-core" cx="476" cy="113" r="5" />
+        <circle class="route-traveler" r="7" />
+        <g class="route-origin">
+          <circle cx="58" cy="507" r="15" />
+          <circle cx="58" cy="507" r="5" />
+          <text x="82" y="513">LEAD</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="band kpi-band sect" id="caso">
+  <div class="wrap">
+    <div class="kpi-head">
+      <div class="head on-band">
+        <p class="eyebrow on-band">Caso real · Campaña ya cerrada</p>
+        <h2 class="h2">760 contactos en 18 días</h2>
+      </div>
+      <p class="lede">Una campaña de captación real, con <b>dos personas</b> en el seguimiento y la conversación funcionando sola el resto del tiempo.</p>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <span class="fig">4.671</span>
+        <span class="lbl eyebrow on-band">Mensajes</span>
+        <p>Gestionados entre la automatización y el equipo.</p>
+      </div>
+      <div class="kpi">
+        <span class="fig">48%</span>
+        <span class="lbl eyebrow on-band">Contestó</span>
+        <p>366 personas. Por correo no se llega al 5%.</p>
+      </div>
+      <div class="kpi">
+        <span class="fig">65</span>
+        <span class="lbl eyebrow on-band">Clientes</span>
+        <p>Contratación confirmada: uno de cada doce contactos.</p>
+      </div>
+      <div class="kpi win">
+        <span class="fig">1,66 €</span>
+        <span class="lbl eyebrow on-band">Por cliente</span>
+        <p>108 € de WhatsApp en toda la campaña.</p>
+      </div>
+    </div>
+
+    <div class="kpi-foot">
+      <p>Y al terminar no te quedan solo 65 clientes: te queda <b>el mapa de cómo llegaron</b>. Qué canal de ventas cierra al 22,7% y cuál al 1,1%, qué mensaje les hizo contestar y dónde se quedaron los demás. Eso es lo que hace que <b>la próxima campaña no empiece de cero</b>.</p>
+      <p class="tech">En este caso, por cada cliente, la empresa facturó 3.658 €</p>
+    </div>
+  </div>
+</section>
+
+<section class="band sect" id="recorrido">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">De principio a fin</p>
+      <h2 class="h2">Qué pasa con un lead desde que entra</h2>
+    </div>
+
+    <div class="route">
+      <div class="step">
+        <span class="step-n eyebrow">01</span>
+        <div class="step-body">
+          <h3 class="h3">Entra</h3>
+          <p>De un anuncio de Meta, de un formulario de tu web, de tu agenda o de tu CRM. Llega con su nombre y con lo que pidió.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-n eyebrow">02</span>
+        <div class="step-body">
+          <h3 class="h3">Recibe tu mensaje</h3>
+          <p>Por WhatsApp, <b>en segundos</b>. Festivos y madrugadas incluidos: el lead contesta cuando acaba de ver tu anuncio, no dos horas después.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-n eyebrow">03</span>
+        <div class="step-body">
+          <h3 class="h3">Conversa solo</h3>
+          <p>Botones, listas y formularios dentro del propio chat. Según lo que responde <b>se etiqueta solo</b> y el recorrido elige por dónde sigue.</p>
+        </div>
+      </div>
+      <div class="step last">
+        <span class="step-n eyebrow">04</span>
+        <div class="step-body">
+          <h3 class="h3">Lead convertido</h3>
+          <p>Solo cuando hay alguien decidido a dar el paso. Con el historial entero y su ficha delante. <b>El equipo no entra a filtrar: entra a cerrar.</b></p>
+        </div>
+      </div>
+    </div>
+
+    <p class="route-foot">Todo el equipo ve el mismo chat, pero <b>escribe uno cada vez</b>: el turno lo reparte el servidor, no la buena voluntad.</p>
+  </div>
+</section>
+
+<section class="band feat-band sect" id="capacidades">
+  <div class="wrap">
+    <div class="showcase">
+      <div class="shot">
+        <figure>
+          <img src="/app/bandeja-demo.png" width="1441" height="1092" alt="Bandeja de demostración de Lead Routes con contactos y conversación ficticios: lista de chats a la izquierda y conversación abierta a la derecha.">
+        </figure>
+      </div>
+      <div class="showcase-copy">
+        <div class="head">
+          <p class="eyebrow">Qué hace</p>
+          <h2 class="h2">Lo preparas una vez y responde siempre</h2>
+        </div>
+        <p class="lede">Las automatizaciones viven dentro de la propia aplicación y se montan arrastrando cajas y uniéndolas con flechas, como en una pizarra. <b>Nada de fórmulas ni de código</b>, y ninguna herramienta externa de por medio. Lo que contestan acaba aquí, en la misma bandeja que usa tu equipo.</p>
+        <p class="showcase-note">Datos de demostración. Más de un número en una sola bandeja. Cada conversación lleva su canal, su responsable y sus etiquetas, y <b>mientras alguien responde el chat queda tomado</b>.</p>
+      </div>
+    </div>
+
+    <div class="caps">
+      <article class="cap">
+        <span class="eyebrow">Automatizaciones</span>
+        <h3 class="h3">Recorridos que se dibujan</h3>
+        <p>Condiciones, esperas, horarios de atención y una salida <b>«si algo falla»</b> para que el recorrido no se muera a mitad.</p>
+      </article>
+      <article class="cap">
+        <span class="eyebrow">Chats</span>
+        <h3 class="h3">Un equipo en un solo número</h3>
+        <p>Cada mensaje lleva el nombre de quien lo mandó, y mientras alguien responde <b>el chat queda tomado</b>.</p>
+      </article>
+      <article class="cap">
+        <span class="eyebrow">Notas</span>
+        <h3 class="h3">Avisos que el cliente no ve</h3>
+        <p>Dejas una nota dentro de la conversación para quien la coja después. Se queda en casa, no sale por WhatsApp.</p>
+      </article>
+      <article class="cap">
+        <span class="eyebrow">Contactos</span>
+        <h3 class="h3">Cada lead en su sitio</h3>
+        <p>Etiquetas por interés y por origen, campos propios y filtros para encontrar lo que buscas en un segundo.</p>
+      </article>
+      <article class="cap">
+        <span class="eyebrow">Envíos</span>
+        <h3 class="h3">Plantillas y difusiones</h3>
+        <p>Programas un mensaje para mañana y lanzas envíos masivos controlados, cambiando de número sin cambiar de pantalla.</p>
+      </article>
+      <article class="cap">
+        <span class="eyebrow">Correo</span>
+        <h3 class="h3">El buzón compartido, ordenado</h3>
+        <p>Conectas Outlook y ves <b>quién ha contestado y cuándo</b>. Nadie contesta dos veces y nada importante se hunde.</p>
+      </article>
+      <article class="cap">
+        <span class="eyebrow">Operaciones</span>
+        <h3 class="h3">Nada queda a oscuras</h3>
+        <p>Cada envío y cada automatización queda registrada <b>paso a paso</b>, con su entrada, su salida y su error si lo hubo.</p>
+      </article>
+      <article class="cap">
+        <span class="eyebrow">Equipo</span>
+        <h3 class="h3">Permisos por persona</h3>
+        <p>Decides quién ve qué número, quién puede difundir y quién toca las automatizaciones.</p>
+      </article>
+      <article class="cap win">
+        <span class="eyebrow">Coste</span>
+        <h3 class="h3">Sin gasto en IA</h3>
+        <p>Los recorridos son reglas que tú decides, no un modelo que adivina: <b>mañana contesta lo mismo que hoy</b>.</p>
+      </article>
+    </div>
+
+    <div class="channels">
+      <span class="channel">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <defs><linearGradient id="wa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5BD066"></stop><stop offset="1" stop-color="#27B43E"></stop></linearGradient></defs>
+          <path fill="url(#wa)" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.2 14.8l-.4-.2-2.6.7.7-2.5-.2-.4A8 8 0 0 1 12 4Zm-3.3 4.3c-.2 0-.5.1-.7.3-.3.3-.8.8-.8 1.8s.8 2 1 2.2c.1.2 1.5 2.4 3.8 3.3 1.9.7 2.3.6 2.7.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.6.8c-.1.2-.3.2-.5.1-.2-.1-.9-.4-1.7-1.1-.6-.6-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4l.4-.5c.1-.2.1-.3 0-.5l-.6-1.5c-.2-.4-.3-.4-.5-.4h-.4Z"></path>
+        </svg>
+        WhatsApp Business
+      </span>
+      <span class="channel">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FB8A2E"></stop><stop offset=".35" stop-color="#E2425C"></stop><stop offset=".7" stop-color="#C62F94"></stop><stop offset="1" stop-color="#6A45BE"></stop></linearGradient></defs>
+          <rect x="3" y="3" width="18" height="18" rx="5.4" fill="none" stroke="url(#ig)" stroke-width="1.8"></rect>
+          <circle cx="12" cy="12" r="4" fill="none" stroke="url(#ig)" stroke-width="1.8"></circle>
+          <circle cx="17.2" cy="6.8" r="1.3" fill="#B13589"></circle>
+        </svg>
+        Instagram
+      </span>
+      <span class="channel">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <defs><linearGradient id="ms" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00C6FF"></stop><stop offset="1" stop-color="#0068FF"></stop></linearGradient></defs>
+          <path fill="url(#ms)" d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.4 5.4 3.7 7.1V22l3.4-1.9c.9.2 1.9.4 2.9.4 5.5 0 10-4.1 10-9.3S17.5 2 12 2Zm.9 12.3-2.5-2.6-4.6 2.6 5-5.3 2.5 2.5L18 9.1l-5.1 5.2Z"></path>
+        </svg>
+        Messenger
+      </span>
+      <span class="channel">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.5" y="5" width="19" height="14" rx="2.6" fill="none" stroke="#4460A0" stroke-width="1.8" stroke-linejoin="round"></rect>
+          <path d="M3.4 6.4 12 13l8.6-6.6" fill="none" stroke="#4460A0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        Correo <span class="tech">Outlook</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="band gain-band sect">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Por qué sale a cuenta</p>
+      <h2 class="h2">Lo que cambia en la empresa</h2>
+    </div>
+    <div class="gains">
+      <article class="gain">
+        <span class="gain-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 5h18l-7 8v5l-4 2v-7L3 5Z" />
+          </svg>
+        </span>
+        <h3 class="h3">Dejas de perseguir a quien no iba a comprar</h3>
+        <p>La conversación filtra sola. Tu equipo habla solo con los que ya dijeron que sí, y con el historial completo delante: ni una llamada a ciegas.</p>
+      </article>
+      <article class="gain">
+        <span class="gain-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="6" rx="8" ry="3" />
+            <path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
+          </svg>
+        </span>
+        <h3 class="h3">Pagas por capacidad, no por mensaje</h3>
+        <p>La cuota no sube porque uses más el producto. Lo que WhatsApp cobra por conversación lo pagas a Meta y lo ves al céntimo, sin intermediarios.</p>
+      </article>
+      <article class="gain">
+        <span class="gain-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2 20 5v6c0 5.2-3.1 8.7-8 11-4.9-2.3-8-5.8-8-11V5l8-3Z" />
+            <rect x="9" y="10" width="6" height="6" rx="1" />
+            <path d="M10.5 10V8.5a1.5 1.5 0 0 1 3 0V10" />
+          </svg>
+        </span>
+        <h3 class="h3">Tus datos son solo tuyos</h3>
+        <p>Tu instancia, tus conversaciones en tu servidor y el aislamiento entre empresas resuelto <b>en la base de datos</b>, no en una condición que alguien pueda olvidar. Y exportables cuando quieras.</p>
+      </article>
+      <article class="gain">
+        <span class="gain-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+            <circle cx="9" cy="6" r="2" fill="#19436a" />
+            <circle cx="16" cy="12" r="2" fill="#19436a" />
+            <circle cx="8" cy="18" r="2" fill="#19436a" />
+          </svg>
+        </span>
+        <h3 class="h3">Con tu nombre y tus colores</h3>
+        <p>El panel se sirve con tu marca, tu logo y tu dominio. Ni un nombre ajeno delante de tus clientes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band plans-band sect" id="planes">
+  <div class="wrap">
+    <div class="plans-head">
+      <div class="head on-band">
+        <p class="eyebrow on-band">Planes</p>
+        <h2 class="h2">Pruébalo un trimestre entero</h2>
+      </div>
+      <div>
+        <span class="trial">3 meses de prueba gratis</span>
+        <p class="lede">Tres meses sin pagar la cuota. Si no te sirve, lo dejas y te llevas tus datos exportados.</p>
+      </div>
+    </div>
+
+    <div class="plans">
+      <article class="plan featured">
+        <div class="plan-top">
+          <div>
+            <h3>Pro</h3>
+            <p class="for">Para el equipo que ya vive de los leads que entran.</p>
+          </div>
+          <span class="pick">El más elegido</span>
+        </div>
+        <div class="price">
+          <span class="amount">39 €</span>
+          <span class="per">/ mes</span>
+          <span class="after">Gratis los 3 primeros meses</span>
+        </div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#147A58"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span><b>3 integrantes</b> y 1 número de WhatsApp</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#147A58"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Chats, contactos, etiquetas y notas internas</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#147A58"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Plantillas, difusiones y catálogo</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#147A58"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Panel de operaciones y correo de Outlook</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#147A58"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Copias diarias, 30 días de retención</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#147A58"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Soporte por correo en 24 h laborables</span></li>
+        </ul>
+        <button class="btn btn-primary" type="button" (click)="openContact('Plan Pro')"><span>Empezar con Pro</span></button>
+      </article>
+
+      <article class="plan">
+        <div class="plan-top">
+          <div>
+            <h3>Business</h3>
+            <p class="for">Para varias sedes, varios números y tu propia marca.</p>
+          </div>
+        </div>
+        <div class="price">
+          <span class="amount">199 €</span>
+          <span class="per">/ mes</span>
+          <span class="after">Gratis los 3 primeros meses</span>
+        </div>
+        <ul>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#7DD3AE"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Todo lo de Pro, y además:</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#7DD3AE"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span><b>Sin límite de integrantes</b> y 5 números de WhatsApp</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#147A58"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Automatizaciones sin límite</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#7DD3AE"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Integración con tu CRM</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#7DD3AE"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Copias diarias, 90 días de retención</span></li>
+          <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#7DD3AE"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Soporte por correo y teléfono en 4 h</span></li>
+        </ul>
+        <button class="btn btn-on-band" type="button" (click)="openContact('Plan Business')"><span>Hablar de Business</span></button>
+      </article>
+    </div>
+
+    <div class="plans-note">
+      <p class="tech">Lo que WhatsApp cobra por conversación lo factura Meta directamente y no entra en la cuota: en España, alrededor de 0,05 € una conversación de marketing y 0,03 € una de utilidad, con las que inicia el cliente gratis hasta cierto volumen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band close sect">
+  <div class="wrap">
+    <p class="eyebrow">Siguiente paso</p>
+    <h2 class="h2">Media hora y lo ves funcionando con tus propios leads</h2>
+    <p class="lede">Te montamos un recorrido con tu caso real y lo pruebas tu mismo antes de decidir nada. </p>
+    <div class="cta-row" style="margin-top:0">
+      <button class="btn btn-primary" type="button" (click)="openContact('Demo')"><span>Pedir una demo</span></button>
+      <a class="btn btn-secondary" href="#caso"><span>Repasar el caso real</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">
+      <svg class="mark" viewBox="192 189 870 868" aria-hidden="true">
+        <path d="M613,189 L582,196 L556,209 L248,403 L230,417 L214,435 L198,466 L192,495 L192,755 L200,786 L208,802 L217,815 L242,838 L320,885 L564,1041 L585,1050 L600,1054 L629,1057 L658,1053 L673,1048 L694,1037 L701,1031 L705,1024 L705,1013 L702,1006 L657,969 L500,848 L438,797 L416,774 L403,753 L398,733 L400,714 L410,694 L428,675 L450,659 L470,648 L498,636 L534,624 L666,591 L689,583 L712,572 L728,560 L738,546 L741,536 L739,517 L730,502 L715,490 L692,479 L658,470 L621,466 L442,464 L413,462 L402,456 L394,447 L391,440 L391,427 L398,414 L408,406 L422,402 L703,402 L744,408 L776,417 L816,435 L839,451 L857,469 L866,482 L875,500 L880,521 L880,540 L876,558 L867,577 L860,587 L842,606 L829,616 L792,637 L748,655 L666,684 L632,700 L612,717 L608,725 L607,734 L612,747 L620,756 L631,765 L651,777 L698,800 L785,838 L897,890 L907,893 L918,893 L930,889 L1013,838 L1039,813 L1051,793 L1057,778 L1062,752 L1062,500 L1057,471 L1044,442 L1032,426 L1011,407 L687,203 L668,195 L640,189 Z"></path>
+      </svg>
+      Lead Routes
+    </span>
+    <p class="claim">Diseña el recorrido de cada lead.</p>
+    <a href="https://leadsroutes.com">leadsroutes.com</a>
+  </div>
+</footer>
+
+<dialog #contactDialog class="contact-modal" aria-labelledby="contact-title" (click)="closeOnBackdrop($event)" (cancel)="onDialogCancel($event)" (close)="onDialogClose()">
+  <button class="contact-close" type="button" aria-label="Cerrar formulario" [disabled]="sending()" (click)="closeContact()">×</button>
+  @if (sent()) {
+    <div class="contact-success" role="status">
+      <span class="contact-success-icon" aria-hidden="true">✓</span>
+      <h2 id="contact-title">Solicitud enviada</h2>
+      <p>Gracias. Hemos recibido tus datos y nos pondremos en contacto contigo.</p>
+      <button class="btn btn-primary" type="button" (click)="closeContact()"><span>Cerrar</span></button>
+    </div>
+  } @else {
+    <div class="contact-intro">
+      <p class="eyebrow">{{ interest() }}</p>
+      <h2 id="contact-title">Hablemos de tus leads</h2>
+      <p>Déjanos tus datos y contactaremos contigo para ayudarte a dar el siguiente paso.</p>
+    </div>
+    <form #contactForm (submit)="submitContact($event)" [attr.aria-busy]="sending()">
+      <p class="contact-required-note">Todos los campos son obligatorios.</p>
+      <div class="contact-fields">
+        <label><span>Nombre de contacto <span class="required-mark" aria-hidden="true">*</span></span>
+          <input name="nombre_contacto" type="text" autocomplete="name" maxlength="120" required aria-required="true" autofocus (input)="clearFieldValidity($event)">
+        </label>
+        <label><span>NIF de empresa <span class="required-mark" aria-hidden="true">*</span></span>
+          <input name="nif" type="text" autocomplete="off" minlength="8" maxlength="12" required aria-required="true" (input)="clearFieldValidity($event)">
+        </label>
+        <label><span>Teléfono <span class="required-mark" aria-hidden="true">*</span></span>
+          <input name="telefono" type="tel" autocomplete="tel" maxlength="30" required aria-required="true" (input)="clearFieldValidity($event)">
+        </label>
+        <label><span>Correo electrónico <span class="required-mark" aria-hidden="true">*</span></span>
+          <input name="correo" type="email" autocomplete="email" maxlength="254" required aria-required="true" (input)="clearFieldValidity($event)">
+        </label>
+      </div>
+      @if (error()) {
+        <p class="contact-error" role="alert">{{ error() }}</p>
+      }
+      <p class="contact-privacy">Tus datos se enviarán al sistema de contacto de Lead Routes para responder a tu solicitud.</p>
+      <button class="btn btn-primary contact-submit" type="submit" [disabled]="sending()">
+        <span>{{ sending() ? 'Enviando…' : 'Enviar solicitud' }}</span>
+      </button>
+    </form>
+  }
+</dialog>
