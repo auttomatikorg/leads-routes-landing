@@ -1,9 +1,7 @@
 <header class="topbar">
   <div class="wrap">
     <span class="logo">
-      <svg class="mark" viewBox="192 189 870 868" aria-hidden="true">
-        <path d="M613,189 L582,196 L556,209 L248,403 L230,417 L214,435 L198,466 L192,495 L192,755 L200,786 L208,802 L217,815 L242,838 L320,885 L564,1041 L585,1050 L600,1054 L629,1057 L658,1053 L673,1048 L694,1037 L701,1031 L705,1024 L705,1013 L702,1006 L657,969 L500,848 L438,797 L416,774 L403,753 L398,733 L400,714 L410,694 L428,675 L450,659 L470,648 L498,636 L534,624 L666,591 L689,583 L712,572 L728,560 L738,546 L741,536 L739,517 L730,502 L715,490 L692,479 L658,470 L621,466 L442,464 L413,462 L402,456 L394,447 L391,440 L391,427 L398,414 L408,406 L422,402 L703,402 L744,408 L776,417 L816,435 L839,451 L857,469 L866,482 L875,500 L880,521 L880,540 L876,558 L867,577 L860,587 L842,606 L829,616 L792,637 L748,655 L666,684 L632,700 L612,717 L608,725 L607,734 L612,747 L620,756 L631,765 L651,777 L698,800 L785,838 L897,890 L907,893 L918,893 L930,889 L1013,838 L1039,813 L1051,793 L1057,778 L1062,752 L1062,500 L1057,471 L1044,442 L1032,426 L1011,407 L687,203 L668,195 L640,189 Z"></path>
-      </svg>
+      <img class="mark" src="/logo.svg" alt="" aria-hidden="true" width="25" height="25">
       Lead Routes
     </span>
     <nav class="topnav">
@@ -12,7 +10,7 @@
       <a href="#caso">Caso real</a>
       <a href="#planes">Planes</a>
     </nav>
-    <button class="btn btn-primary btn-sm" type="button" (click)="openContact('Prueba gratis')"><span>Empezar gratis</span></button>
+    <a class="btn btn-primary btn-sm" href="#planes"><span>Empezar gratis</span></a>
   </div>
 </header>
 
@@ -23,7 +21,7 @@
       <h1>Cada lead, atendido en segundos. <em>A cualquier hora.</em></h1>
       <p class="lede">Cada mensaje no contestado puede costarte una venta. Crea un sistema que responda automáticamente, filtre y te entregue oportunidades listas para cerrar. <b>Factura más sin gastar el doble.</b></p>
       <div class="cta-row">
-        <button class="btn btn-primary" type="button" (click)="openContact('Prueba de 3 meses')"><span>Probar 3 meses gratis</span></button>
+        <a class="btn btn-primary" href="#planes"><span>Probar 3 meses gratis</span></a>
         <a class="btn btn-secondary" href="#caso"><span>Ver el caso real</span></a>
       </div>
       <div class="states">
@@ -31,39 +29,129 @@
       </div>
     </div>
 
-    <div class="hero-route" role="img" aria-label="Un camino azul oscuro asciende desde un lead hasta convertirse en cliente.">
-      <svg viewBox="0 0 600 540" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <defs>
-          <pattern id="route-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-            <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#D7E6F4" stroke-width="1" />
-          </pattern>
-          <linearGradient id="route-surface" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#F8FBFF" />
-            <stop offset="1" stop-color="#E8F2FC" />
-          </linearGradient>
-        </defs>
-        <rect width="600" height="540" rx="24" fill="url(#route-surface)" />
-        <rect width="600" height="540" rx="24" fill="url(#route-grid)" opacity=".6" />
-        <path class="route-contour" d="M-30 452C54 420 87 419 122 363S188 281 258 290 370 222 384 149 464 44 635 46" />
-        <path class="route-contour" d="M-18 508C72 470 101 467 158 407S202 333 283 341 412 263 440 189 523 99 630 95" />
-        <path class="route-bed" d="M58 507C99 470 136 493 145 444S91 386 120 347 227 361 248 322 217 256 260 218 360 238 394 177 443 124 476 113" />
-        <path class="route-road" pathLength="1000" d="M58 507C99 470 136 493 145 444S91 386 120 347 227 361 248 322 217 256 260 218 360 238 394 177 443 124 476 113" />
-        <path class="route-center" d="M58 507C99 470 136 493 145 444S91 386 120 347 227 361 248 322 217 256 260 218 360 238 394 177 443 124 476 113" />
-        <g class="route-client">
-          <rect x="403" y="32" width="174" height="68" rx="13" />
-          <circle cx="431" cy="66" r="10" />
-          <path d="M427 66l3 3 5-6" />
-          <text x="452" y="72">CLIENTE</text>
-        </g>
-        <circle class="route-finish" cx="476" cy="113" r="15" />
-        <circle class="route-finish-core" cx="476" cy="113" r="5" />
-        <circle class="route-traveler" r="7" />
-        <g class="route-origin">
-          <circle cx="58" cy="507" r="15" />
-          <circle cx="58" cy="507" r="5" />
-          <text x="82" y="513">LEAD</text>
-        </g>
-      </svg>
+    @let s = heroStep();
+    <div #heroFlow class="hero-flow" role="img" aria-label="Un lead entra desde un anuncio, recibe al instante un mensaje automático por WhatsApp, responde, queda etiquetado y llega preparado y asignado al equipo de ventas.">
+      <div class="hf-stage" aria-hidden="true">
+
+        <!-- Lienzo del recorrido, como en el editor de automatizaciones -->
+        <div class="hf-window hf-abs" style="--x:0;--y:28;--w:512;--h:486">
+          <div class="hf-window-head">
+            <b>Captación · Anuncios</b>
+            <span class="hf-live"><span class="dot"></span>Activo 24/7</span>
+          </div>
+        </div>
+
+        <svg class="hf-links" viewBox="0 0 600 540" focusable="false">
+          <path class="hf-link" d="M134 158V196" />
+          <path class="hf-link" d="M134 260V298" />
+          <path class="hf-link" d="M134 362V400" />
+          <path class="hf-link" d="M244 330H300" />
+          <path class="hf-link hf-link-soft" [class.on]="s >= 2" d="M244 228C286 228 280 132 322 132" />
+          <path class="hf-link hf-link-soft" [class.on]="s >= 7" d="M244 432C280 432 274 452 310 452" />
+
+          <path class="hf-trace" [class.on]="s >= 2" pathLength="1" d="M134 158V196" />
+          <path class="hf-trace" [class.on]="s >= 2" pathLength="1" d="M244 228C286 228 280 132 322 132" />
+          <path class="hf-trace" [class.on]="s >= 5" pathLength="1" d="M134 260V298" />
+          <path class="hf-trace" [class.on]="s >= 5" pathLength="1" d="M244 330H300" />
+          <path class="hf-trace hf-trace-ok" [class.on]="s >= 6" pathLength="1" d="M134 362V400" />
+          <path class="hf-trace hf-trace-ok" [class.on]="s >= 7" pathLength="1" d="M244 432C280 432 274 452 310 452" />
+
+          <circle class="hf-port" [class.on]="s >= 1" cx="134" cy="158" r="3.5" />
+          <circle class="hf-port" [class.on]="s >= 2" cx="134" cy="196" r="3.5" />
+          <circle class="hf-port" [class.on]="s >= 2" cx="134" cy="260" r="3.5" />
+          <circle class="hf-port" [class.on]="s >= 5" cx="134" cy="298" r="3.5" />
+          <circle class="hf-port hf-port-ok" [class.on]="s >= 6" cx="134" cy="362" r="3.5" />
+          <circle class="hf-port hf-port-ok" [class.on]="s >= 6" cx="134" cy="400" r="3.5" />
+          <circle class="hf-port" [class.on]="s >= 5" cx="244" cy="330" r="3.5" />
+          <circle class="hf-port" [class.on]="s >= 5" cx="300" cy="330" r="3.5" />
+
+          <text class="hf-branch hf-branch-ok" [class.on]="s >= 6" x="143" y="384">SÍ</text>
+          <text class="hf-branch" [class.on]="s >= 5" x="263" y="322">NO</text>
+        </svg>
+
+        <div class="hf-node hf-abs" [class.on]="s >= 1" [class.current]="s === 1" style="--x:24;--y:94;--w:220">
+          <span class="hf-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 10v4a1 1 0 0 0 1 1h2l5 4V5L7 9H5a1 1 0 0 0-1 1Z" /><path d="M15.5 9a3.5 3.5 0 0 1 0 6M18 6.5a7 7 0 0 1 0 11" /></svg>
+          </span>
+          <span class="hf-node-txt"><span class="hf-eyebrow">Disparador</span><b>Lead de un anuncio</b><small>Formulario de Meta</small></span>
+        </div>
+
+        <div class="hf-node hf-abs" [class.on]="s >= 2" [class.current]="s >= 2 && s <= 4" style="--x:24;--y:196;--w:220">
+          <span class="hf-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 5.5h16v11H10l-6 4v-15Z" /><path d="M8.5 10h7M8.5 13h4" /></svg>
+          </span>
+          <span class="hf-node-txt"><span class="hf-eyebrow">WhatsApp</span><b>Mensaje de bienvenida</b><small>Con botones de respuesta</small></span>
+        </div>
+
+        <div class="hf-node hf-abs" [class.on]="s >= 5" [class.current]="s === 5" style="--x:24;--y:298;--w:220">
+          <span class="hf-icon">
+            <svg viewBox="0 0 24 24"><path d="M6 3.5v17" /><path d="M6 8.5c0 4 3.5 5.5 8 5.5h4" /><path d="m15.5 11 3 3-3 3" /></svg>
+          </span>
+          <span class="hf-node-txt"><span class="hf-eyebrow">Condición</span><b>¿Pide información?</b><small>Etiqueta según responde</small></span>
+        </div>
+
+        <div class="hf-node hf-node-ok hf-abs" [class.on]="s >= 6" [class.current]="s >= 6" style="--x:24;--y:400;--w:220">
+          <span class="hf-icon">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20a6.5 6.5 0 0 1 13 0" /><path d="m16 11 2 2 4-4.5" /></svg>
+          </span>
+          <span class="hf-node-txt"><span class="hf-eyebrow">Entrega</span><b>Asignar a ventas</b><small>Por turnos del equipo</small></span>
+        </div>
+
+        <div class="hf-pill hf-abs" [class.on]="s >= 5" style="--x:300;--y:311;--w:146">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="M12 8v4l2.5 2" /></svg>
+          Recordatorio en 24 h
+        </div>
+
+        <!-- Conversación real que genera el recorrido -->
+        <div class="hf-chat hf-abs" [class.on]="s >= 2" style="--x:322;--y:0;--w:266">
+          <div class="hf-chat-head">
+            <span class="hf-avatar">LM</span>
+            <span class="hf-who"><b>Laura Martín</b><small>WhatsApp · desde anuncio</small></span>
+            <span class="hf-time">02:14</span>
+          </div>
+          <div class="hf-chat-body">
+            <div class="hf-msg hf-out" [class.on]="s >= 2">
+              <p>Hola, Laura. Gracias por escribirnos. ¿Te enviamos la información y los precios?</p>
+              <span class="hf-meta">Automático · 3 s
+                <svg viewBox="0 0 24 24"><path d="m2 13 4 4 8-9M10 15.5l1.5 1.5 8-9" /></svg>
+              </span>
+            </div>
+            <div class="hf-replies" [class.on]="s >= 3">
+              <span class="hf-reply" [class.picked]="s >= 4">Quiero información</span>
+              <span class="hf-reply">Ahora no</span>
+            </div>
+            <div class="hf-msg hf-in" [class.on]="s >= 4">
+              <p>Quiero información</p>
+              <span class="hf-meta">02:15</span>
+            </div>
+            <div class="hf-tagline" [class.on]="s >= 5">
+              <svg viewBox="0 0 24 24"><path d="M3.5 12.5V4h8.5l9 9-8.5 8.5-9-9Z" /><circle cx="8" cy="8.5" r="1.2" /></svg>
+              Etiqueta añadida <span class="hf-tag">Interesada</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resultado: el lead llega al equipo filtrado y con contexto -->
+        <div class="hf-lead hf-abs" [class.on]="s >= 7" style="--x:310;--y:388;--w:282">
+          <div class="hf-lead-top">
+            <span class="hf-ok"><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17l9-10" /></svg></span>
+            <span class="hf-eyebrow">Lead preparado</span>
+            <span class="hf-time">02:15</span>
+          </div>
+          <b class="hf-lead-name">Laura Martín</b>
+          <div class="hf-tags">
+            <span class="hf-tag">Interesada</span>
+            <span class="hf-tag hf-tag-plain">Anuncio Meta</span>
+          </div>
+          <div class="hf-lead-foot">
+            <span class="hf-avatar hf-avatar-sm">M</span>
+            <span>Asignado a <b>Marta</b></span>
+            <span class="hf-sep">·</span>
+            <span>Historial completo</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
@@ -241,10 +329,7 @@
         Messenger
       </span>
       <span class="channel">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="2.5" y="5" width="19" height="14" rx="2.6" fill="none" stroke="#4460A0" stroke-width="1.8" stroke-linejoin="round"></rect>
-          <path d="M3.4 6.4 12 13l8.6-6.6" fill="none" stroke="#4460A0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
+        <img src="/app/outlook.svg" alt="" aria-hidden="true" width="19" height="19">
         Correo <span class="tech">Outlook</span>
       </span>
     </div>
@@ -339,7 +424,7 @@
           <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#147A58"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Copias diarias, 30 días de retención</span></li>
           <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#147A58"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Soporte por correo en 24 h laborables</span></li>
         </ul>
-        <button class="btn btn-primary" type="button" (click)="openContact('Plan Pro')"><span>Empezar con Pro</span></button>
+        <button class="btn btn-primary" type="button" (click)="openContact('Plan Pro')"><span>Prueba gratuita de 3 meses</span></button>
       </article>
 
       <article class="plan">
@@ -362,7 +447,7 @@
           <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#7DD3AE"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Copias diarias, 90 días de retención</span></li>
           <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true" stroke="#7DD3AE"><path d="M4.5 10.5 8 14l7.5-8"></path></svg><span>Soporte por correo y teléfono en 4 h</span></li>
         </ul>
-        <button class="btn btn-on-band" type="button" (click)="openContact('Plan Business')"><span>Hablar de Business</span></button>
+        <button class="btn btn-on-band" type="button" (click)="openContact('Plan Business')"><span>Prueba gratuita de 3 meses</span></button>
       </article>
     </div>
 
@@ -372,24 +457,54 @@
   </div>
 </section>
 
-<section class="band close sect">
-  <div class="wrap">
-    <p class="eyebrow">Siguiente paso</p>
-    <h2 class="h2">Media hora y lo ves funcionando con tus propios leads</h2>
-    <p class="lede">Te montamos un recorrido con tu caso real y lo pruebas tu mismo antes de decidir nada. </p>
-    <div class="cta-row" style="margin-top:0">
-      <button class="btn btn-primary" type="button" (click)="openContact('Demo')"><span>Pedir una demo</span></button>
-      <a class="btn btn-secondary" href="#caso"><span>Repasar el caso real</span></a>
+<footer id="contacto" class="contact-footer">
+  <div class="wrap contact-footer-grid">
+    <div class="contact-footer-copy">
+      <p class="eyebrow">Hablemos</p>
+      <h2 class="h2">Media hora y lo ves funcionando con tus propios leads</h2>
+      <p class="lede">Cuéntanos cómo llegan hoy tus contactos. Te enseñaremos un recorrido con tu caso real para que veas qué puede hacer Lead Routes por tu equipo.</p>
+    </div>
+
+    <div class="contact-footer-panel">
+      @if (footerSent()) {
+        <div class="contact-success" role="status">
+          <span class="contact-success-icon" aria-hidden="true">✓</span>
+          <h2>Solicitud enviada</h2>
+          <p>Gracias. Hemos recibido tus datos y nos pondremos en contacto contigo.</p>
+        </div>
+      } @else {
+        <h3>Solicita una demo</h3>
+        <p class="contact-footer-intro">Déjanos tus datos y prepararemos una conversación sobre tu caso.</p>
+        <form (submit)="submitContact($event, 'footer')" [attr.aria-busy]="footerSending()">
+          <p class="contact-required-note">Todos los campos son obligatorios.</p>
+          <div class="contact-fields">
+            <label><span>Nombre de contacto <span class="required-mark" aria-hidden="true">*</span></span>
+              <input name="nombre_contacto" type="text" autocomplete="name" maxlength="120" required aria-required="true" (input)="clearFieldValidity($event)">
+            </label>
+            <label><span>NIF de empresa <span class="required-mark" aria-hidden="true">*</span></span>
+              <input name="nif" type="text" autocomplete="off" minlength="8" maxlength="12" required aria-required="true" (input)="clearFieldValidity($event)">
+            </label>
+            <label><span>Teléfono <span class="required-mark" aria-hidden="true">*</span></span>
+              <input name="telefono" type="tel" autocomplete="tel" maxlength="30" required aria-required="true" (input)="clearFieldValidity($event)">
+            </label>
+            <label><span>Correo electrónico <span class="required-mark" aria-hidden="true">*</span></span>
+              <input name="correo" type="email" autocomplete="email" maxlength="254" required aria-required="true" (input)="clearFieldValidity($event)">
+            </label>
+          </div>
+          @if (footerError()) {
+            <p class="contact-error" role="alert">{{ footerError() }}</p>
+          }
+          <p class="contact-privacy">Tus datos se enviarán al sistema de contacto de Lead Routes para responder a tu solicitud.</p>
+          <button class="btn btn-primary contact-submit" type="submit" [disabled]="footerSending()">
+            <span>{{ footerSending() ? 'Enviando…' : 'Solicitar demo' }}</span>
+          </button>
+        </form>
+      }
     </div>
   </div>
-</section>
-
-<footer>
-  <div class="wrap">
+  <div class="wrap footer-bottom">
     <span class="logo">
-      <svg class="mark" viewBox="192 189 870 868" aria-hidden="true">
-        <path d="M613,189 L582,196 L556,209 L248,403 L230,417 L214,435 L198,466 L192,495 L192,755 L200,786 L208,802 L217,815 L242,838 L320,885 L564,1041 L585,1050 L600,1054 L629,1057 L658,1053 L673,1048 L694,1037 L701,1031 L705,1024 L705,1013 L702,1006 L657,969 L500,848 L438,797 L416,774 L403,753 L398,733 L400,714 L410,694 L428,675 L450,659 L470,648 L498,636 L534,624 L666,591 L689,583 L712,572 L728,560 L738,546 L741,536 L739,517 L730,502 L715,490 L692,479 L658,470 L621,466 L442,464 L413,462 L402,456 L394,447 L391,440 L391,427 L398,414 L408,406 L422,402 L703,402 L744,408 L776,417 L816,435 L839,451 L857,469 L866,482 L875,500 L880,521 L880,540 L876,558 L867,577 L860,587 L842,606 L829,616 L792,637 L748,655 L666,684 L632,700 L612,717 L608,725 L607,734 L612,747 L620,756 L631,765 L651,777 L698,800 L785,838 L897,890 L907,893 L918,893 L930,889 L1013,838 L1039,813 L1051,793 L1057,778 L1062,752 L1062,500 L1057,471 L1044,442 L1032,426 L1011,407 L687,203 L668,195 L640,189 Z"></path>
-      </svg>
+      <img class="mark" src="/logo.svg" alt="" aria-hidden="true" width="25" height="25">
       Lead Routes
     </span>
     <p class="claim">Diseña el recorrido de cada lead.</p>
