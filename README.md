@@ -29,3 +29,7 @@ Los botones de contacto abren un formulario que envía un `POST` JSON a
 El webhook permite CORS desde `https://leadsroutes.com`. `npm start` utiliza
 `proxy.conf.json` para que el formulario funcione también en desarrollo local.
 Otros dominios de producción necesitarán estar autorizados en el webhook.
+
+Las páginas legales de esta landing están en `public/politica-privacidad.html` y
+`public/terminos-y-condiciones.html`. Identifican a INNOVALAUS SL (NIF
+B67146357) como titular y responsable del tratamiento.

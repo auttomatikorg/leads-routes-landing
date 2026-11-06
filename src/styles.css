@@ -668,6 +668,9 @@ body::before{
   margin-top:clamp(64px,8vw,100px);padding-block:var(--sp-6);border-top:1px solid var(--ui-border)
 }
 .footer-bottom>a{text-decoration:none;color:var(--brand-primary);font-weight:500}
+.footer-legal{display:flex;gap:var(--sp-4);flex-wrap:wrap}
+.footer-legal a,.contact-consent a{color:var(--brand-primary);text-decoration:underline;text-underline-offset:2px}
+.footer-legal a{font-size:13px}
 .footer-bottom .claim{font-size:14px;color:var(--brand-ink-muted)}
 @media (max-width:940px){.contact-footer-grid{grid-template-columns:1fr}.contact-footer-copy{padding-top:0}.contact-footer-panel{max-width:640px;width:100%}}
 @media (max-width:560px){.contact-footer-panel .contact-fields{grid-template-columns:1fr}}
@@ -704,6 +707,7 @@ body::before{
 .contact-consent,.contact-newsletter{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5;color:var(--brand-ink)}
 .contact-consent input,.contact-newsletter input{width:18px;height:18px;margin:1px 0 0;flex:none;accent-color:var(--brand-primary);cursor:pointer}
 .contact-consent input:focus-visible,.contact-newsletter input:focus-visible{outline:2px solid var(--brand-primary);outline-offset:2px}
+.contact-consent a:focus-visible,.footer-legal a:focus-visible{outline:2px solid var(--brand-primary);outline-offset:3px}
 .contact-privacy{font-size:12.5px;line-height:1.5;color:var(--brand-ink-muted)}
 .contact-error{padding:12px;border-radius:var(--ui-radius-sm);background:#fff0ee;color:#8d2920;font-size:14px}
 .contact-submit{width:100%}

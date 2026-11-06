@@ -1,0 +1,26 @@
+:root{color-scheme:light;--ink:#173A5C;--muted:#4B6680;--blue:#1E73BE;--line:rgba(30,115,190,.2);--paper:#F5F9FE}
+*{box-sizing:border-box}
+html{font-family:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);line-height:1.65}
+a{color:var(--blue);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.wrap{width:min(100% - 44px,920px);margin-inline:auto}
+.site-header{background:#fff;border-bottom:1px solid var(--line)}
+.site-header .wrap{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:600;font-size:18px}
+.brand img{width:28px;height:28px}
+.back{font-size:14px;font-weight:500}
+main{padding-block:clamp(48px,7vw,88px)}
+.eyebrow{margin:0 0 10px;color:var(--blue);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+h1{margin:0;font-size:clamp(32px,5vw,52px);line-height:1.15;letter-spacing:-.035em}
+.intro{max-width:68ch;margin:20px 0 36px;color:var(--muted);font-size:17px}
+.legal-content{background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(24px,5vw,56px);box-shadow:0 18px 42px rgba(25,67,106,.08)}
+.legal-content section+section{margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+h2{margin:0 0 12px;font-size:21px;line-height:1.3}
+p{margin:0 0 14px}p:last-child{margin-bottom:0}
+ul{margin:10px 0 0;padding-left:22px}li+li{margin-top:7px}
+.site-footer{border-top:1px solid var(--line);background:#fff}
+.site-footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-block:26px;font-size:14px}
+.site-footer nav{display:flex;gap:20px;flex-wrap:wrap}
+@media(max-width:600px){.site-header .wrap{min-height:68px}.back{font-size:13px}.legal-content{border-radius:14px}}
+@media(prefers-color-scheme:dark){:root{color-scheme:dark;--ink:#E7F1FB;--muted:#A3BFD9;--blue:#8FC2F2;--line:rgba(124,178,240,.25);--paper:#0B1C2F} .site-header,.legal-content,.site-footer{background:#112B49}}
