@@ -18,7 +18,8 @@ html{scroll-behavior:smooth}
      · El verde es «entregado» y el rojo «fallo». Los canales tienen sus
        propios colores en la marca y no gastan ninguno de los dos.
 
-   La captura de la bandeja usa contactos y mensajes ficticios de demostracion.
+   La captura de la bandeja es real: nombres y telefonos de clientes van
+   difuminados en la propia imagen.
    =========================================================================== */
 :root{
   color-scheme: light;
