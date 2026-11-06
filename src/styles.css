@@ -701,6 +701,9 @@ body::before{
   font:400 15px var(--brand-font-sans)
 }
 .contact-fields input:focus-visible{outline:2px solid var(--brand-primary);outline-offset:2px}
+.contact-consent,.contact-newsletter{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5;color:var(--brand-ink)}
+.contact-consent input,.contact-newsletter input{width:18px;height:18px;margin:1px 0 0;flex:none;accent-color:var(--brand-primary);cursor:pointer}
+.contact-consent input:focus-visible,.contact-newsletter input:focus-visible{outline:2px solid var(--brand-primary);outline-offset:2px}
 .contact-privacy{font-size:12.5px;line-height:1.5;color:var(--brand-ink-muted)}
 .contact-error{padding:12px;border-radius:var(--ui-radius-sm);background:#fff0ee;color:#8d2920;font-size:14px}
 .contact-submit{width:100%}

@@ -23,7 +23,9 @@ El contenido de la página está en `src/app/app.html`, los estilos en `src/styl
 
 Los botones de contacto abren un formulario que envía un `POST` JSON a
 `https://n8n.innovalaus.com/webhook/lead-routes-landing`. El cuerpo incluye
-`nombre_contacto`, `nif`, `correo`, `telefono` e `interes`.
+`nombre_contacto`, `nif`, `correo`, `telefono`, `interes` y
+`acepta_newsletter` (booleano, `false` si no se marca la casilla) y
+`acepta_politica_y_terminos` (booleano; aceptación obligatoria).
 El webhook permite CORS desde `https://leadsroutes.com`. `npm start` utiliza
 `proxy.conf.json` para que el formulario funcione también en desarrollo local.
 Otros dominios de producción necesitarán estar autorizados en el webhook.

@@ -99,7 +99,9 @@ export class App {
     const form = event.currentTarget as HTMLFormElement;
     const requiredInputs = Array.from(form.querySelectorAll<HTMLInputElement>('input[required]'));
     for (const input of requiredInputs) {
-      input.setCustomValidity(input.value.trim() ? '' : 'Completa este campo.');
+      input.setCustomValidity(input.type === 'checkbox'
+        ? (input.checked ? '' : 'Acepta la Política de privacidad y los Términos y condiciones.')
+        : (input.value.trim() ? '' : 'Completa este campo.'));
     }
     if (!form.reportValidity()) return;
 
@@ -110,6 +112,8 @@ export class App {
       correo: String(values.get('correo') ?? '').trim(),
       telefono: String(values.get('telefono') ?? '').trim(),
       interes: source === 'footer' ? 'Solicitud de demo desde el pie de página' : this.interest(),
+      acepta_newsletter: values.has('acepta_newsletter'),
+      acepta_politica_y_terminos: values.has('acepta_politica_y_terminos'),
     };
 
     sending.set(true);

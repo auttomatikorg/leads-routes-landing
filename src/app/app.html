@@ -476,7 +476,7 @@
         <h3>Solicita una demo</h3>
         <p class="contact-footer-intro">Déjanos tus datos y prepararemos una conversación sobre tu caso.</p>
         <form (submit)="submitContact($event, 'footer')" [attr.aria-busy]="footerSending()">
-          <p class="contact-required-note">Todos los campos son obligatorios.</p>
+          <p class="contact-required-note">Los campos marcados con * son obligatorios.</p>
           <div class="contact-fields">
             <label><span>Nombre de contacto <span class="required-mark" aria-hidden="true">*</span></span>
               <input name="nombre_contacto" type="text" autocomplete="name" maxlength="120" required aria-required="true" (input)="clearFieldValidity($event)">
@@ -491,6 +491,14 @@
               <input name="correo" type="email" autocomplete="email" maxlength="254" required aria-required="true" (input)="clearFieldValidity($event)">
             </label>
           </div>
+          <label class="contact-consent">
+            <input name="acepta_politica_y_terminos" type="checkbox" value="true" required aria-required="true" (change)="clearFieldValidity($event)">
+            <span>He leído y acepto la Política de privacidad y los Términos y condiciones. <span class="required-mark" aria-hidden="true">*</span></span>
+          </label>
+          <label class="contact-newsletter">
+            <input name="acepta_newsletter" type="checkbox" value="true">
+            <span>Acepto recibir por correo electrónico novedades y comunicaciones de la newsletter de Lead Routes. (Opcional)</span>
+          </label>
           @if (footerError()) {
             <p class="contact-error" role="alert">{{ footerError() }}</p>
           }
@@ -528,7 +536,7 @@
       <p>Déjanos tus datos y contactaremos contigo para ayudarte a dar el siguiente paso.</p>
     </div>
     <form #contactForm (submit)="submitContact($event)" [attr.aria-busy]="sending()">
-      <p class="contact-required-note">Todos los campos son obligatorios.</p>
+      <p class="contact-required-note">Los campos marcados con * son obligatorios.</p>
       <div class="contact-fields">
         <label><span>Nombre de contacto <span class="required-mark" aria-hidden="true">*</span></span>
           <input name="nombre_contacto" type="text" autocomplete="name" maxlength="120" required aria-required="true" autofocus (input)="clearFieldValidity($event)">
@@ -543,6 +551,14 @@
           <input name="correo" type="email" autocomplete="email" maxlength="254" required aria-required="true" (input)="clearFieldValidity($event)">
         </label>
       </div>
+      <label class="contact-consent">
+        <input name="acepta_politica_y_terminos" type="checkbox" value="true" required aria-required="true" (change)="clearFieldValidity($event)">
+        <span>He leído y acepto la Política de privacidad y los Términos y condiciones. <span class="required-mark" aria-hidden="true">*</span></span>
+      </label>
+      <label class="contact-newsletter">
+        <input name="acepta_newsletter" type="checkbox" value="true">
+        <span>Acepto recibir por correo electrónico novedades y comunicaciones de la newsletter de Lead Routes. (Opcional)</span>
+      </label>
       @if (error()) {
         <p class="contact-error" role="alert">{{ error() }}</p>
       }
